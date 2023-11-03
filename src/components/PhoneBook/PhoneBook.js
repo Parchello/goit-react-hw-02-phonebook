@@ -21,15 +21,20 @@ export const PhoneBook = ({ onAdd }) => {
         }}
       >
         <Form>
-          <label>First Name</label>
-          <Field id="firstName" name="name" placeholder="Jane" />
+          <label>Name</label>
+          <Field id="firstName" name="name" placeholder="Place name here" />
           <ErrorMessage name="name" />
 
-          <label>Last Name</label>
-          <Field id="number" name="number" type="number" placeholder="Doe" />
+          <label>Number</label>
+          <Field
+            id="number"
+            name="number"
+            type="number"
+            placeholder="Phone number"
+          />
           <ErrorMessage name="number" />
 
-          <button type="submit">Submit</button>
+          <button type="submit">Add contact</button>
         </Form>
       </Formik>
     </div>
