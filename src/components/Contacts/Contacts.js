@@ -1,3 +1,5 @@
+import { ContactDelButton } from './Contacts.styled';
+
 export const Contacts = ({ contactList, onDelete }) => {
   return (
     <div>
@@ -8,9 +10,12 @@ export const Contacts = ({ contactList, onDelete }) => {
               <p>
                 {contact.name}: {contact.number}
               </p>
-              <button type="button" onClick={() => onDelete(contact.id)}>
+              <ContactDelButton
+                type="button"
+                onClick={() => onDelete(contact.id)}
+              >
                 delete
-              </button>
+              </ContactDelButton>
             </li>
           ))}
         </ul>
